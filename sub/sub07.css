@@ -1,0 +1,154 @@
+/*
+ 动画入门 
+ */
+.ani01 {
+  border: 1px solid #c07c7c;
+  font-size: 1rm;
+  /* 
+第一种动画
+transition表示过渡动画
+第一个参数是什么属性变化会引发动画
+第二个参数是动画的时长
+第三个参数可选，表示动画的速动曲线
+transition: font-size 2s ease-in-out;
+表示font-size属性变化是动画过渡，时长2秒,速动是进出时候动画慢速
+ */
+  transition: font-size 2s ease-in-out;
+  color: #000000;
+}
+
+.ani01:hover {
+  font-size: 2rem;
+  color: #0000ff;
+}
+
+.ani02 {
+  width: 100px;
+  height: 100px;
+  box-shadow: 0px 0px 0px #53cac0;
+  background-color: #a523b1;
+  /* all表示任意属性变化都会是动画过渡 */
+  transition: all 2s;
+  color: #ffffff;
+}
+
+
+.ani02:hover {
+  width: 120px;
+  height: 120px;
+  background-color: rgb(83, 83, 216);
+  box-shadow: 2px 2px 0px #53cac0;
+}
+
+/* 关键帧动画 */
+/*
+ 第一部分，定义动画的关键帧
+格式：
+@keyframes 关键帧动画的名称
+百分比进度{
+  样式。。。
+ }。。。
+ 例如：
+ @keyframes myani{
+   0%{
+     color:red;
+     font-size:1rem;
+    }
+    80%{
+      color:blue;
+      font-size:2rem
+    }
+   } 
+   表示套用了animation属性为myani的样式会产生动画过渡
+   过渡时间的0%时样式为红色的1rem字体，80%时为蓝色2rem字体
+   */
+@keyframes ani01 {
+  0% {
+    width: 100px;
+    height: 100px;
+  }
+
+  100% {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+/* 
+第二部分，使用关键帧动画 
+格式：
+animation:关键帧名称 动画持续时间 循环次数（可以省略， 表示只有一次）
+*/
+.ani03 {
+  width: 100px;
+  height: 100px;
+  background-color: #c07c7c;
+  /* 动画 */
+  animation: ani01 2s infinite;
+}
+
+.ani04 {
+  width: 100px;
+  height: 100px;
+  background-color: rgb(7, 97, 97);
+}
+
+.ani04:hover {
+  animation: ani01 1s;
+}
+
+/* 抖动效果的关键帧 */
+@keyframes shake {
+  0% {
+    /* 
+    倾斜元素
+    transform属性是变形
+    rotate表示倾斜，参数是倾斜的角度
+     */
+    transform: rotate(0deg);
+  }
+  10%{
+    transform: rotate(5deg);
+  }
+  20%{
+    transform: rotate(0deg);
+  }
+  30%{
+    transform: rotate(-5deg);
+  }
+  40%{
+    transform: rotate(0deg);
+  }
+  50%{
+    transform: rotate(5deg);
+  }
+  60%{
+    transform: rotate(0deg);
+  }
+  70%{
+    transform: rotate(-5deg);
+  }
+  80%{
+    transform: rotate(0deg);
+  } 
+  90%{
+    transform: rotate(5deg);
+  }
+  100%{
+    transform: rotate(0deg);
+  }
+}
+
+.ani05{
+  width: 100px;
+  height: 100px;
+  background-color: rgb(34, 200, 230);
+}
+.ani05:hover{
+  cursor: pointer;
+  animation: shake 0.5s infinite;
+}
+/* 
+关键帧动画可以过渡任何css样式，所以可以做出更丰富的动画效果
+而且应为可以定义不同时间进度的样式，可以做到细节控制
+ */
