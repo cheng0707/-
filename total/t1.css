@@ -114,6 +114,9 @@ body {
   justify-content: center;
   align-items: center;
 }
+
 .myflex>div{
   height: 100px;
 }
+
+/* 组合的布局 */
