@@ -1,0 +1,80 @@
+body {
+  padding: 0px;
+  margin: 0px;
+  color: #ffffff;
+}
+
+.bg01 {
+  background-color: #b61d1d;
+}
+
+.bg02 {
+  background-color: #960743;
+}
+
+.bg03 {
+  background-color: rgb(35, 165, 124);
+}
+
+.bg04 {
+  background-color: rgb(79, 79, 159);
+}
+
+
+.mybox {
+  /* 盒模型的外边距 */
+  margin-top: 1rem;
+  margin-right: 2em;
+  margin-bottom: 3rem;
+  margin-left: 4rem;
+  /* 盒模型的内边距 */
+  padding: 1rem 2rem 3rem 4rem;
+  /*盒模型的边框 */
+  border: 3px solid #000000;
+}
+
+
+/* 绝对和相对定位(慎用！） */
+.rbox{
+  /* 相对定位容器，可以控制里面的绝对定位元素的坐标是相对于容器的 */
+  position: relative;
+}
+
+
+.abox{
+  /*
+   绝对定位，可以指定在容器内的位置
+  会产生元素叠加的效果 
+  */
+  position: absolute;
+  right: 0px;
+  top: 50%;
+}
+
+.mybg{
+  background-image: url('https://klcxy.top/myoss/common/queryOssUrl?tbOssInfo.oiid=98&tbOssInfo.obid=3');
+  background-size: cover;
+  /* 背景固定 */
+  background-attachment: fixed;
+  /* background-repeat: no-repeat; */
+  width: 400px;
+  height: 300px;
+}
+
+.mytitle{
+  /*  rgba红 绿 蓝 透明度
+  颜色取值范围是0-255
+  透明度是0-1 0是全透，1是不透明
+   */
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.myop{
+  /* 元素透明，取值0-1，0是全透，1是不透明 */
+  opacity: 0.5;
+}
+
+.myfilter{
+  /* 滤镜模糊 */
+  filter: blur(2px);
+}

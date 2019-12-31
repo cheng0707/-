@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>盒模型</title>
+  <link rel="stylesheet" href="t2.css">
+</head>
+
+<body>
+  <div class="bg01" style="border: 1px solid #ac0;">
+    <div class="bg02 mybox">
+      <div class="bg03">
+        盒模型
+      </div>
+    </div>
+  </div>
+
+  <hr>
+  <div class="bg01" style="display: flex;">
+    <div class="bg04" style="margin: 10px;">1111</div>
+    <div class="bg03" style="padding: 10px;">2222</div>
+    <div class="bg02">3333</div>
+  </div>
+
+  <div class="rbox">
+    <div class="bg04">
+      底层的对照元素
+      <br>
+      多行文本
+    </div>
+    <div class="bg02 abox">位</div>
+  </div>
+
+  <!-- 背景透明色 -->
+  <div class="mybg">
+    <div class="mytitle">标题文字</div>
+  </div>
+  <hr>
+
+  <!-- 元素透明 -->
+  <div class="mybg myop">
+    透明的元素
+  </div>
+
+  <hr>
+  <!-- 滤镜模糊 -->
+  <div class="mybg myfilter ">
+    模糊的元素
+  </div>
+
+</body>
+
+</html>
