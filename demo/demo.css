@@ -1,4 +1,17 @@
-body{
-  background-color: black;
+body {
+  background-color: yellowgreen;
   color: white;
+}
+
+.a1 {
+  color: black;
+  background-color: cornflowerblue;
+  border: 1px solid #232222;
+  padding: 4px;
+  
+}
+
+.a2 {
+  display: flex;
+  justify-content: space-around;
 }
