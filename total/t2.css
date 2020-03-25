@@ -52,7 +52,7 @@ body {
 }
 
 .mybg{
-  background-image: url('https://klcxy.top/myoss/common/queryOssUrl?tbOssInfo.oiid=98&tbOssInfo.obid=3');
+  background-image: url('../m.jpg');
   background-size: cover;
   /* 背景固定 */
   background-attachment: fixed;
