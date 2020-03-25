@@ -1,0 +1,29 @@
+/* 文字居中 */
+.tc{
+  text-align: center;
+}
+
+/* 图片容器 */
+.images{
+  display: flex;
+  justify-content: center;
+}
+
+/* 图片同一高度 */
+.images img{
+  height: 10rem;
+}
+
+/* 支持按钮样式 */
+#btn{
+display: inline-block;
+padding: 0.5rem 1rem;
+margin: 1rem;
+border: 2px solid #ff0000;
+border-radius: 0.5rem;
+cursor: pointer;
+}
+
+#btn:hover{
+  background-color: #e48d8d;
+}
