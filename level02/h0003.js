@@ -65,17 +65,42 @@ btnOK3.addEventListener('click', function() {
   }
 });
 
-// 切换文本框特效
+// 切换文本框特效=====================================================
 var divInput = document.getElementById('divInput');
 var btn2 = document.getElementById('btn2');
-console.log(divInput, btn2);
+var txtNum = document.getElementById('txtNum');
+var spNum = document.getElementById('spNum');
+console.log(divInput, btn2, txtNum, spNum);
 var count = 0;
 btn2.addEventListener('click', function() {
+  // ================================================================
   console.log('切换样式');
   count = count + 1;
   if (count % 2 == 1) {
     divInput.setAttribute('class', 'form-input error');
   } else {
     divInput.setAttribute('class', 'form-input');
+  }
+  // ===============================================================
+  var num = txtNum.value.replace(/\s/g, '');
+  console.log('输入的数是：', num);
+  var fnum = parseFloat(num); //转换成数（可以是小数）
+  var inum = parseInt(num); //转化成整数
+  console.log(fnum, inum);
+  // 输入的是数且转换成小数的结果和整数的结果一样才是整数输入
+  if (isNaN(fnum)) {
+    spNum.innerHTML = '奇怪的数入又来了';
+    return;
+  }
+  spNum.innerHTML = '';
+  // > < == != ! || >= <= not and && or ||
+  if (fnum == inum) {
+    spNum.innerHTML = inum + '是整数！';
+    // 区间判断 && 100<=inum<=200
+    if (inum >= 100 && inum <= 200) {
+      spNum.innerHTML = '奇怪的整数出现了';
+    }
+  } else {
+    spNum.innerHTML = fnum + '是小数！';
   }
 });

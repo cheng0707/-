@@ -18,23 +18,55 @@ nav01.addEventListener('click', function() {
   // 第一个就把滑块移动0%
   // 元素的style可以修改任意样式，把left修改成0%
   bar.style.left = '0%';
-  nowpage.setAttribute('class', 'move-out'); //当前页面出
-  page01.setAttribute('class', 'move-in'); //页面一进来
+  // 通过当前元素的id的值来判定方向，如果当前的id必要切换的大就是反方向切换动画
+  var nowpageid = nowpage.getAttribute('id');
+  var dir = nowpageid > 'page01';
+  console.log(nowpageid, 'page01', dir);
+  // 动画的效果（移动方向）通过id的大小决定
+  if (dir) {
+    nowpage.setAttribute('class', 'move-out-right'); //当前页面出
+    page01.setAttribute('class', 'move-in-right'); //页面一进来
+  } else {
+    nowpage.setAttribute('class', 'move-out'); //当前页面出
+    page01.setAttribute('class', 'move'); //页面一进来
+  }
+
   nowpage = page01; //当前页面变成第一页
 });
 
 nav02.addEventListener('click', function() {
   bar.style.left = '33.3333%';
-  // 切换页面动画 当前的页面套用出去的动画 页面二套用进来的动画
-  nowpage.setAttribute('class', 'move-out');
-  page02.setAttribute('class', 'move-in');
-  // 页面二成为当前页面
+  var nowpageid = nowpage.getAttribute('id');
+  var dir = nowpageid > 'page02';
+  console.log(nowpageid, 'page02', dir);
+  if (dir) {
+    // 切换页面动画 当前的页面套用出去的动画 页面二套用进来的动画
+    nowpage.setAttribute('class', 'move-out-right');
+    page02.setAttribute('class', 'move-in-right');
+    // 页面二成为当前页面
+  } else {
+    nowpage.setAttribute('class', 'move-out'); //当前页面出
+    page02.setAttribute('class', 'move-in'); //页面二进来
+  }
+
   nowpage = page02;
 });
 
 nav03.addEventListener('click', function() {
   bar.style.left = '66.6666%';
-  nowpage.setAttribute('class', 'move-out');
-  page03.setAttribute('class', 'move-in');
+  var nowpageid = nowpage.getAttribute('id');
+  var dir = nowpageid > 'page03';
+  console.log(nowpageid, 'page03', dir);
+  if (dir) {
+    nowpage.setAttribute('class', 'move-out-right');
+    page03.setAttribute('class', 'move-in-right');
+  } else {
+    nowpage.setAttribute('class', 'move-out'); //当前页面出
+    page03.setAttribute('class', 'move-in'); //页面三进来
+  }
+
   nowpage = page03;
+  // '12345678' '23456'
+  console.log('12345678' > '23456');
+  console.log(1234578 > 233456);
 });
