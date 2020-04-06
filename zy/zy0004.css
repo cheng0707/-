@@ -1,0 +1,44 @@
+body {
+  margin: 0px;
+  background-image: url('../12.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.mydiv {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #ffffff;
+  padding: 5rem;
+  font-size: 2rem;
+  min-height: 100vh;
+}
+
+.mydiv>div {
+  display: flex;
+  align-items: center;
+}
+
+.line {
+  border-top: 1px solid #ffffff;
+  width: 15rem;
+  height: 0px;
+  margin: 0px 10px;
+}
+
+.top-line {
+  border-bottom: 2px solid #ff0000;
+  padding: 1rem;
+}
+
+.sj {
+  width: 0px;
+  height: 0px;
+  /* transparent表示透过 */
+  border-left: 10px solid transparent;
+  border-right: 10px solid #5258a4;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  /* scale表示变形 Y表示y轴*/
+  transform: scaleY(0.8);
+
+}
