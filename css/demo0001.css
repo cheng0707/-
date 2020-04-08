@@ -1,0 +1,9 @@
+img{
+  width: 200px;
+  
+}
+body{
+  /* css引用图片是相对于自己的，而不是引用他的html页面影响 */
+  background-image: url('../images/204.jpg');
+
+}
