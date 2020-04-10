@@ -1,0 +1,35 @@
+#div01 {
+  background-color: rgb(226, 140, 226);
+}
+
+#div02 {
+  background-color: gold;
+}
+
+#div03 {
+  background-color: rgb(131, 238, 186);
+}
+
+.line01 {
+  display: flex;
+}
+
+.line01>div {
+  flex: 1;
+}
+
+.line02>div {
+  height: 0.5rem;
+  background-color: lightcoral;
+  width: 33.3333%;
+  transform: translateX(0%);
+  transition: transform 0.5s ease-in-out;
+}
+.container{
+  display: flex;
+  justify-content: center;
+}
+.container>section{
+  width: 450px;
+  padding: 2rem;
+}
